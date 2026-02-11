@@ -5,6 +5,10 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
 
+        // Generate files (run this once)
+        generateFiles();
+
+        // File to test
         String fileName = "numbers_1000.txt";
 
         Integer[] originalData = TxtReader.readFile(fileName);
@@ -14,6 +18,16 @@ public class Main {
         runMergeSort(originalData);
         runQuickSort(originalData);
         runRadixSort(originalData);
+    }
+
+    private static void generateFiles() throws IOException {
+        RandomNumber.generateFile("numbers_10.txt", 10);
+        RandomNumber.generateFile("numbers_50.txt", 50);
+        RandomNumber.generateFile("numbers_100.txt", 100);
+        RandomNumber.generateFile("numbers_500.txt", 500);
+        RandomNumber.generateFile("numbers_1000.txt", 1000);
+        RandomNumber.generateFile("numbers_2000.txt", 2000);
+        RandomNumber.generateFile("numbers_3000.txt", 3000);
     }
 
     private static void runSelectionSort(Integer[] data) {

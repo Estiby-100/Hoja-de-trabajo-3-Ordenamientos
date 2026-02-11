@@ -23,27 +23,49 @@ public class Main {
         SelectionSort.sort(array);
         long endTime = System.nanoTime();
 
-        System.out.println("Selection Sort time: " + (endTime - startTime));
+        System.out.println("Selection Sort (unordered): " + (endTime - startTime));
+
+        startTime = System.nanoTime();
+        SelectionSort.sort(array);
+        endTime = System.nanoTime();
+
+        System.out.println("Selection Sort (ordered): " + (endTime - startTime));
+        System.out.println();
     }
 
     private static void runGnomeSort(Integer[] data) {
         Integer[] array = Arrays.copyOf(data, data.length);
 
-        long startTime = System.nanoTime();
+       long startTime = System.nanoTime();
         GnomeSort.sort(array);
         long endTime = System.nanoTime();
 
-        System.out.println("Gnome Sort time: " + (endTime - startTime));
+        System.out.println("Gnome Sort (unordered): " + (endTime - startTime));
+
+        startTime = System.nanoTime();
+        GnomeSort.sort(array);
+        endTime = System.nanoTime();
+
+        System.out.println("Gnome Sort (ordered): " + (endTime - startTime));
+        System.out.println();
     }
 
     private static void runMergeSort(Integer[] data) {
         Integer[] array = Arrays.copyOf(data, data.length);
 
-        long startTime = System.nanoTime();
+       long startTime = System.nanoTime();
         MergeSort.sort(array);
         long endTime = System.nanoTime();
 
-        System.out.println("Merge Sort time: " + (endTime - startTime));
+        System.out.println("Merge Sort (unordered): " + (endTime - startTime));
+
+        startTime = System.nanoTime();
+        MergeSort.sort(array);
+        endTime = System.nanoTime();
+
+        System.out.println("Merge Sort (ordered): " + (endTime - startTime));
+        System.out.println();
+
     }
 
     private static void runQuickSort(Integer[] data) {
@@ -53,7 +75,14 @@ public class Main {
         QuickSort.sort(array);
         long endTime = System.nanoTime();
 
-        System.out.println("Quick Sort time: " + (endTime - startTime));
+        System.out.println("Quick Sort (unordered): " + (endTime - startTime));
+
+        startTime = System.nanoTime();
+        QuickSort.sort(array);
+        endTime = System.nanoTime();
+
+        System.out.println("Quick Sort (ordered): " + (endTime - startTime));
+        System.out.println();
     }
 
     private static void runRadixSort(Integer[] data) {
@@ -63,6 +92,13 @@ public class Main {
         RadixSort.sort(array);
         long endTime = System.nanoTime();
 
-        System.out.println("Radix Sort time: " + (endTime - startTime));
+        System.out.println("Radix Sort (unordered): " + (endTime - startTime));
+
+        startTime = System.nanoTime();
+        RadixSort.sort(array);
+        endTime = System.nanoTime();
+
+        System.out.println("Radix Sort (ordered): " + (endTime - startTime));
+        System.out.println();
     }
 }

@@ -5,7 +5,7 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
 
-        String fileName = "numbers_1000.txt";
+        String fileName = "numbers_100.txt";
 
         Integer[] originalData = TxtReader.readFile(fileName);
 
@@ -30,7 +30,7 @@ public class Main {
         endTime = System.nanoTime();
 
         System.out.println("Selection Sort (ordered): " + (endTime - startTime));
-        System.out.println();
+        
     }
 
     private static void runGnomeSort(Integer[] data) {
@@ -47,7 +47,6 @@ public class Main {
         endTime = System.nanoTime();
 
         System.out.println("Gnome Sort (ordered): " + (endTime - startTime));
-        System.out.println();
     }
 
     private static void runMergeSort(Integer[] data) {
@@ -64,7 +63,7 @@ public class Main {
         endTime = System.nanoTime();
 
         System.out.println("Merge Sort (ordered): " + (endTime - startTime));
-        System.out.println();
+        
 
     }
 
@@ -82,7 +81,7 @@ public class Main {
         endTime = System.nanoTime();
 
         System.out.println("Quick Sort (ordered): " + (endTime - startTime));
-        System.out.println();
+        
     }
 
     private static void runRadixSort(Integer[] data) {
@@ -99,6 +98,6 @@ public class Main {
         endTime = System.nanoTime();
 
         System.out.println("Radix Sort (ordered): " + (endTime - startTime));
-        System.out.println();
+        
     }
 }
